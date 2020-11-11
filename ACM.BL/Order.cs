@@ -10,18 +10,17 @@ namespace ACM.BL
      {
           public Order()
           {
-               OrderDate = DateTime.Today;
+        
           }
 
           public Order(int orderNumber)
           {
-               OrderDate = DateTime.Today;
                OrderNumber = orderNumber;
           }
 
           public int OrderNumber { get; private set; }
 
-          public DateTime OrderDate { get; set; }
+          public DateTimeOffset? OrderDate { get; set; }
           
           /// <summary>
           /// Validate current order.
@@ -31,8 +30,7 @@ namespace ACM.BL
           {
                var isValid = true;
 
-               if (OrderDate != DateTime.Today) isValid = false;
-               if (OrderNumber <= 0) isValid = false;
+               if (OrderDate == null) isValid = false;
 
                return isValid;
           }

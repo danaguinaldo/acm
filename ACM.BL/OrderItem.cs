@@ -15,16 +15,15 @@ namespace ACM.BL
 
           }
 
-          public OrderItem(Product orderProduct, int quantity, double purchasePrice)
+          public OrderItem(int orderItemId)
           {
-               OrderProduct = orderProduct;
-               Quantity = quantity;
-               PurchasePrice = purchasePrice;
+               OrderItemId = orderItemId;
           }
 
-          public Product OrderProduct { get; set; }
+          public int OrderItemId { get; set; }
+          public int ProductId { get; set; }
           public int Quantity { get; set; }
-          public double PurchasePrice { get; set; }
+          public decimal? PurchasePrice { get; set; }
 
           /// <summary>
           /// Validate OrderItem
@@ -35,8 +34,8 @@ namespace ACM.BL
                var isValid = true;
 
                if (Quantity <= 0) isValid = false;
-               if (OrderProduct == null) isValid = false;
-               if (PurchasePrice <= 0) isValid = false;
+               if (ProductId <= 0) isValid = false;
+               if (PurchasePrice == null) isValid = false;
 
                return isValid;
           }

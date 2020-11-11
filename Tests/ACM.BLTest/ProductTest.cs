@@ -14,7 +14,7 @@ namespace ACM.BLTest
                var product = new Product
                {
                     ProductName = "Shovel",
-                    Description = "A shovel"
+                    CurrentPrice = 10.00M
                };
 
                var expected = true;
@@ -27,7 +27,25 @@ namespace ACM.BLTest
           }
 
           [TestMethod]
-          public void ValidateMissingDescription()
+          public void ValidateMissingProductName()
+          {
+               //-- Arrange
+               var product = new Product
+               {
+                    CurrentPrice = 10.00M
+               };
+
+               var expected = false;
+
+               //-- Act
+               var actual = product.Validate();
+
+               //-- Assert
+               Assert.AreEqual(expected, actual);
+          }
+
+          [TestMethod]
+          public void MissingCurrentPrice()
           {
                //-- Arrange
                var product = new Product

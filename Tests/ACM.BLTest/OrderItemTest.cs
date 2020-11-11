@@ -11,7 +11,12 @@ namespace ACM.BLTest
           public void ValidateValid()
           {
                //-- Arrange
-               var orderItem = new OrderItem(new Product(), 1, 10);
+               var orderItem = new OrderItem
+               {
+                    ProductId = 1,
+                    Quantity = 1,
+                    PurchasePrice = 10.00M
+               };
 
                var expected = true;
 
@@ -47,7 +52,7 @@ namespace ACM.BLTest
                //-- Arrange
                var orderItem = new OrderItem
                {
-                    OrderProduct = new Product(),
+                    ProductId = 1,
                     Quantity = 0,
                     PurchasePrice = 10
                };
@@ -67,7 +72,7 @@ namespace ACM.BLTest
                //-- Arrange
                var orderItem = new OrderItem
                {
-                    OrderProduct = new Product(),
+                    ProductId = 1,
                     Quantity = -1,
                     PurchasePrice = 10
                };
@@ -82,34 +87,13 @@ namespace ACM.BLTest
           }
 
           [TestMethod]
-          public void PurchasePriceZero()
+          public void PurchasePriceNull()
           {
                //-- Arrange
                var orderItem = new OrderItem
                {
-                    OrderProduct = new Product(),
+                    ProductId = 1,
                     Quantity = 1,
-                    PurchasePrice = 0
-               };
-
-               var expected = false;
-
-               //-- Act
-               var actual = orderItem.Validate();
-
-               //-- Assert
-               Assert.AreEqual(actual, expected);
-          }
-
-          [TestMethod]
-          public void PurchasePriceNegative()
-          {
-               //-- Arrange
-               var orderItem = new OrderItem
-               {
-                    OrderProduct = new Product(),
-                    Quantity = 1,
-                    PurchasePrice = -1
                };
 
                var expected = false;
