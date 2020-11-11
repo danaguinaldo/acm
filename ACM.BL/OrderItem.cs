@@ -10,6 +10,18 @@ namespace ACM.BL
 {
      public class OrderItem
      {
+          public OrderItem()
+          {
+
+          }
+
+          public OrderItem(Product orderProduct, int quantity, double purchasePrice)
+          {
+               OrderProduct = orderProduct;
+               Quantity = quantity;
+               PurchasePrice = purchasePrice;
+          }
+
           public Product OrderProduct { get; set; }
           public int Quantity { get; set; }
           public double PurchasePrice { get; set; }
@@ -22,8 +34,9 @@ namespace ACM.BL
           {
                var isValid = true;
 
-               if (Quantity == 0) isValid = false;
+               if (Quantity <= 0) isValid = false;
                if (OrderProduct == null) isValid = false;
+               if (PurchasePrice <= 0) isValid = false;
 
                return isValid;
           }
