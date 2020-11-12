@@ -19,7 +19,7 @@ namespace ACM.BL
           }
 
           public string ProductName { get; set; }
-          public string Description { get; set; }
+          public string ProductDescription { get; set; }
           public decimal? CurrentPrice { get; set; }
           public int ProductId { get; private set; }
           
@@ -34,38 +34,6 @@ namespace ACM.BL
                if (CurrentPrice == null) isValid = false;
 
                return isValid;
-          }
-
-          /// <summary>
-          /// Retrieve defined product.
-          /// </summary>
-          /// <param name="productId"></param>
-          /// <returns></returns>
-          public Product Retrieve(int productId)
-          {
-               // Code to retrieve defined product.
-
-               return new Product();
-          }
-
-          /// <summary>
-          /// Retrieve ALL products.
-          /// </summary>
-          /// <returns></returns>
-          public List<Product> Retrieve()
-          {
-               // Code to retrieve all products
-
-               return new List<Product>();
-          }
-
-          /// <summary>
-          /// Saves defined product.
-          /// </summary>
-          /// <returns></returns>
-          public bool Save()
-          {
-               return true;
           }
      }
 }

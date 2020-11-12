@@ -34,37 +34,5 @@ namespace ACM.BL
 
                return isValid;
           }
-
-          /// <summary>
-          /// Retrieve defined order.
-          /// </summary>
-          /// <param name="orderNumber"></param>
-          /// <returns></returns>
-          public Order Retrieve(int orderNumber)
-          {
-               // Code to retrieve defined order
-
-               return new Order();
-          }
-
-          /// <summary>
-          /// Retrieve ALL orders for customer.
-          /// </summary>
-          /// <returns></returns>
-          public Order Retrieve()
-          {
-               // Code to retrieve ALL orders.
-
-               return new Order();
-          }
-
-          /// <summary>
-          /// Save current order.
-          /// </summary>
-          /// <returns></returns>
-          public bool Save()
-          {
-               return true;
-          }
      }
 }
