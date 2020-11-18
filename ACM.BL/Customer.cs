@@ -8,7 +8,7 @@ namespace ACM.BL
 {
      public class Customer
      {
-          public Customer()
+          public Customer(): this(0)
           {
 
           }
@@ -16,8 +16,10 @@ namespace ACM.BL
           public Customer(int customerID)
           {
                CustomerID = customerID;
+               AddressList = new List<Address>();
           }
 
+          public List<Address> AddressList { get; set; }
           public int CustomerID { get; private set; }
           public string EmailAddress { get; set; }
           public string FirstName { get; set; }
