@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Acme.Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace Acme.CommonTest
@@ -7,8 +8,33 @@ namespace Acme.CommonTest
      public class StringHandlerTest
      {
           [TestMethod]
-          public void TestMethod1()
+          public void InsertSpacesTestValid()
           {
+               //-- Arrange
+               var source = "SonicScrewdriver";
+               var expected = "Sonic Screwdriver";
+               var handler = new StringHandler();
+
+               //-- Act
+               var actual = handler.InsertSpaces(source);
+
+               //-- Assert
+               Assert.AreEqual(expected, actual);
+          }
+
+          [TestMethod]
+          public void InsertSpacesTestWithExistingSpace()
+          {
+               //-- Arrange
+               var source = "Sonic Screwdriver";
+               var expected = "Sonic Screwdriver";
+               var handler = new StringHandler();
+
+               //-- Act
+               var actual = handler.InsertSpaces(source);
+
+               //-- Assert
+               Assert.AreEqual(expected, actual);
           }
      }
 }
