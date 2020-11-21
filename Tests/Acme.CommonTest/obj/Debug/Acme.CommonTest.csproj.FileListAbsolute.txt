@@ -14,3 +14,5 @@ D:\Documents\coding\csharp\practice\oop\ACM\Tests\Acme.CommonTest\obj\Debug\Acme
 D:\Documents\coding\csharp\practice\oop\ACM\Tests\Acme.CommonTest\obj\Debug\Acme.CommonTest.csproj.CopyComplete
 D:\Documents\coding\csharp\practice\oop\ACM\Tests\Acme.CommonTest\obj\Debug\Acme.CommonTest.dll
 D:\Documents\coding\csharp\practice\oop\ACM\Tests\Acme.CommonTest\obj\Debug\Acme.CommonTest.pdb
+D:\Documents\coding\csharp\practice\oop\ACM\Tests\Acme.CommonTest\bin\Debug\ACM.BL.dll
+D:\Documents\coding\csharp\practice\oop\ACM\Tests\Acme.CommonTest\bin\Debug\ACM.BL.pdb
