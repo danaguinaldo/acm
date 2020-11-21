@@ -54,6 +54,8 @@ namespace ACM.BL
                }
           }
 
+          public string Log() => $"{CustomerID}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
+      
           public override string ToString() => FullName;
 
           /// <summary>

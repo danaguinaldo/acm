@@ -31,6 +31,9 @@ namespace ACM.BL
                     _productName = value;
                }
           }
+
+          public string Log() => $"{ProductId}: {ProductName} Detail: {ProductDescription} Status: {EntityState.ToString()}";
+
           public string ProductDescription { get; set; }
           public decimal? CurrentPrice { get; set; }
           public int ProductId { get; private set; }
